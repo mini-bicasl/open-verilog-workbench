@@ -53,7 +53,8 @@ When the **Docs** template is used:
    - reset behavior and any latency/timing assumptions,
    - a short usage example when possible,
    - links back to `rtl/<module>.v` and `tb/<module>_tb.{v,sv}`.
-3. Keep documentation **technical and concise**, matching the actual RTL, not guesses.
+3. Where it improves readability, add or refine **brief inline comments** in the relevant RTL/testbench files to clarify intent, non-obvious timing/handshake behavior, or protocol assumptions. Keep comments consistent with the code and the docs, and avoid restating the obvious.
+4. Keep documentation **technical and concise**, matching the actual RTL, not guesses.
 
 ## Workflow 2: Generate / improve testbench from RTL
 

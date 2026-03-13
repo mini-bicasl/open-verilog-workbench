@@ -50,3 +50,17 @@ When writing or updating module documentation:
 - Cross-link the code:
   - `rtl/<module>.v` and `tb/<module>_tb.v`.
 
+## Inline comments in RTL/testbenches
+
+When creating or updating documentation, it is also acceptable (and encouraged) to make the Verilog/SystemVerilog **easier to read** by improving inline comments, as long as:
+
+- Comments stay **brief and technical**, avoiding restating obvious signal names or logic.
+- Comments **match the implemented behavior** and do not contradict the RTL or tests.
+- High-level explanations in comments are consistent with the corresponding `results/issue-<number>/docs/*.md` pages.
+
+Examples of good comment use:
+
+- Documenting non-obvious protocol assumptions (e.g., “AXI-lite write address must be aligned to 4 bytes”).
+- Capturing subtle timing/latency behavior or corner cases that are easy to miss from the code alone.
+- Explaining why specific parameters, magic numbers, or encodings are chosen.
+

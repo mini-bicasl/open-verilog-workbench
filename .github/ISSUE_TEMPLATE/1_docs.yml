@@ -16,6 +16,7 @@ body:
         3. Submit the issue; Copilot/agents will read your attachments and generate/update `docs/<module>.md`.
         4. For details on how documentation should be structured, see `.github/instructions/DOCS.md`.
         5. For how Copilot/agents should behave in this repo, see `.github/copilot-instructions.md`.
+        6. Where it helps readability, Copilot/agents may also add or refine brief inline comments in your Verilog/SystemVerilog files so that the code and docs tell a consistent story.
 
   - type: textarea
     id: files
@@ -28,6 +29,7 @@ body:
         - Use any attached RTL/testbench/source files (including `.v`, `.sv`, `.vh`, `.cpp`, etc., or `.zip` archives) and/or the repo paths listed in this field as the single source of truth.
         - If direct uploads failed with a “File type … not supported” message, assume the user either attached a `.zip` or provided in-repo paths and read those files instead.
         - Generate or update documentation under `docs/`, one Markdown file per module where practical, and link back to the original file paths mentioned here.
+        - Where it meaningfully improves readability, add or refine concise inline comments in the relevant RTL/testbench files, keeping them consistent with the generated docs and the actual behavior of the code.
         - Follow the documentation standards in `.github/instructions/DOCS.md` and the general behavior rules in `.github/copilot-instructions.md`.
     validations:
       required: true
