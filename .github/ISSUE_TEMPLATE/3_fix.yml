@@ -44,24 +44,5 @@ body:
           - the post-fix outcome (pass/fail) and any remaining known limitations.
         - In your final response, include: what failed, what changed, how to re-run, and where the logs/VCDs are located.
         - Follow the general behavior rules in `.github/copilot-instructions.md`.
-      placeholder: |
-        Attach files above and/or list paths here, for example:
-
-        - rtl/foo.v
-        - tb/foo_tb.sv
-        - logs/foo_sim.log
-    validations:
-      required: true
-
-  - type: textarea
-    id: description
-    attributes:
-      label: "Describe the problem"
-      description: "Describe what is going wrong (compile error, simulation failure, wrong behavior)."
-      placeholder: |-
-        - What command or tool are you running? (include version if possible)
-        - What did you expect to happen?
-        - What actually happened? (error messages, wrong waveform, etc.)
-        - If you have a known-good expected output or waveform property, describe it precisely.
     validations:
       required: true
