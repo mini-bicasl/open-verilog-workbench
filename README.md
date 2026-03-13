@@ -1,4 +1,4 @@
-## open-verilog-workbench: `.github` overview
+## Open-Verilog-Workbench
 
 [![Status: experimental](https://img.shields.io/badge/status-experimental-orange)](https://github.com/mini-bicasl/open-verilog-workbench)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue)](https://creativecommons.org/licenses/by/4.0/)
