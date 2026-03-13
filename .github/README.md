@@ -38,5 +38,4 @@ Copilot/agents should:
   - `.github/instructions/ARCHITECTURE.md` – expectations for `docs/ARCHITECTURE.md`.
   - `.github/copilot-instructions.md` – end-to-end workflow and quality bars.
 
-For PRs, follow `.github/PULL_REQUEST_TEMPLATE.md` to document what changed and how to test it.
 

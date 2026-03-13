@@ -10,34 +10,25 @@ body:
         ### How to use this template
 
         1. Attach the Verilog/SystemVerilog **RTL file(s)** for the design you want to test.
-        2. Optionally attach any **existing testbench** you want improved.
-        3. Describe what the testbench should verify and any important clock/reset or corner-case requirements.
-
-        Copilot/agents will read your attachments and create/update `tb/<module>_tb.{v,sv}`.
+        2. If GitHub does not accept `.v` / `.sv` files, compress them into a `.zip` or push them to this repo and reference their paths.
+        3. Optionally attach any **existing testbench** you want improved.
+        4. Describe what the testbench should verify and any important clock/reset or corner-case requirements.
+        5. Copilot/agents will read your attachments and create/update `tb/<module>_tb.{v,sv}`.
+        6. For detailed expectations on testbenches, see `.github/instructions/TB.md`.
+        7. For how Copilot/agents should behave in this repo, see `.github/copilot-instructions.md`.
 
   - type: textarea
     id: files
     attributes:
       label: "Attached RTL / existing TB files"
-      description: "Attach the RTL for the DUT and any existing testbench. If they already live in this repo, you can list the paths (e.g. rtl/foo.v, tb/foo_tb.sv)."
-      placeholder: |
-        Attach files above and/or list paths here, for example:
-
-        - rtl/foo.v
-        - tb/foo_tb.sv
-    validations:
-      required: true
-
-  - type: textarea
-    id: description
-    attributes:
-      label: "Describe the testbench you need"
-      description: "Explain what the testbench should verify and what scenarios matter most."
+      description: "Attach the RTL for the DUT and any existing testbench. If GitHub shows “File type .v not supported”, either (a) compress them into a .zip and attach that, or (b) push them to this repo and list the paths (e.g. rtl/foo.v, tb/foo_tb.sv)."
       value: |
-        Please help create or improve a testbench for my Verilog design.
+        For Copilot/agents:
 
-        - What this testbench should verify:
-        - Any important clock/reset details:
-        - Any special corner cases you care about:
+        - Use any attached RTL/testbench files (.v/.sv or .zip) and/or the repo paths listed in this field as the single source of truth.
+        - If direct .v/.sv uploads failed with “File type .v not supported”, assume the user either attached a .zip or provided in-repo paths and read those files instead.
+        - Create or update deterministic, self-checking testbenches under `tb/` (or `results/issue-<number>/tb/` when appropriate) following `.github/instructions/TB.md`.
+        - Follow the general behavior rules in `.github/copilot-instructions.md`.
     validations:
       required: true
+

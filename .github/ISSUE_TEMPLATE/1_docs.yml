@@ -9,8 +9,10 @@ body:
       value: |
         ### How to use this template
 
-        1. Attach your Verilog/SystemVerilog **RTL and/or testbench files** to this issue (drag & drop or use the file picker).
-        2. If GitHub does not accept `.v` / `.sv` files, compress them into a `.zip` or push them to this repo and reference their paths.
+        1. Attach your Verilog/SystemVerilog **RTL and/or testbench files** (and any related sources like `.sv`, `.vh`, `.cpp`, etc.) to this issue (drag & drop or use the file picker).
+        2. If GitHub does not accept a given file type (for example, showing “File type .v not supported. See the documentation for supported file types.”), either:
+           - compress those files into a `.zip` and attach that, or
+           - push them to this repo and reference their paths in the form fields.
         3. Submit the issue; Copilot/agents will read your attachments and generate/update `docs/<module>.md`.
         4. For details on how documentation should be structured, see `.github/instructions/DOCS.md`.
         5. For how Copilot/agents should behave in this repo, see `.github/copilot-instructions.md`.
@@ -19,12 +21,12 @@ body:
     id: files
     attributes:
       label: "Attached RTL / testbench files"
-      description: "Attach the files you want documented. If GitHub shows “File type .v not supported”, either (a) compress them into a .zip and attach that, or (b) push them to this repo and list the paths (e.g. rtl/foo.v, tb/foo_tb.sv)."
+      description: "Attach the files you want documented. If GitHub shows a message like “File type .v not supported. See the documentation for supported file types.” for `.v`, `.sv`, `.cpp`, or any other source file, either (a) compress them into a `.zip` and attach that, or (b) push them to this repo and list the paths (e.g. rtl/foo.v, tb/foo_tb.sv, src/foo.cpp)."
       value: |
         For Copilot/agents:
 
-        - Use any attached RTL/testbench files (.v/.sv or .zip) and/or the repo paths listed in this field as the single source of truth.
-        - If direct .v/.sv uploads failed with “File type .v not supported”, assume the user either attached a .zip or provided in-repo paths and read those files instead.
+        - Use any attached RTL/testbench/source files (including `.v`, `.sv`, `.vh`, `.cpp`, etc., or `.zip` archives) and/or the repo paths listed in this field as the single source of truth.
+        - If direct uploads failed with a “File type … not supported” message, assume the user either attached a `.zip` or provided in-repo paths and read those files instead.
         - Generate or update documentation under `docs/`, one Markdown file per module where practical, and link back to the original file paths mentioned here.
         - Follow the documentation standards in `.github/instructions/DOCS.md` and the general behavior rules in `.github/copilot-instructions.md`.
     validations:
