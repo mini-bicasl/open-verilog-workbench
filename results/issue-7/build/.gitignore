@@ -1,0 +1,3 @@
+# Compiled simulation binaries and waveform dumps
+*.out
+*.vcd
